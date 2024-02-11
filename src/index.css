@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import "../public/style.css";
+
+html {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #000;
+  --secondary: rgb(24 24 27);
+  --border: rgba(63, 63, 70, 0.4);
+
+  --title: rgb(244 244 245);
+  --subtitle: rgb(161 161 170);
+
+  --bgHeader: rgb(39, 39, 42);
+  --main: #9925ff;
+
+  --icon-hover: #d4d4d8;
+
+  --container-padding: 4.8rem;
+}
+
+.light {
+  --primary: rgb(250, 250, 250);
+  --secondary: rgb(255, 255, 255);
+  --border: rgba(202, 202, 202, 0.518);
+
+  --title: rgb(39 39 42);
+  --subtitle: rgb(82 82 91);
+
+  --bgHeader: rgb(253, 253, 253);
+  --main: rgb(153, 37, 255);
+
+  --icon-hover: #333;
+}
+
+body {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.container {
+  border: 2px solid var(--border);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--secondary);
+  padding: 0 var(--container-padding);
+}
+
+.devider {
+  border-bottom: 1px solid var(--border);
+  margin: 3rem 0;
+  width: calc(100% + var(--container-padding) + var(--container-padding));
+  margin-left: calc(var(--container-padding) * -1);
+}
+
+.icon-circle-up {
+  border: 2px solid rgb(136, 0, 255);
+  border-radius: 50%;
+  background-color: var(--main);
+  font-size: 2.2rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 3%;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+}
+
+
+li {
+  list-style: none;
+}
+a {
+  all: unset;
+
+  transition: 0.2s;
+}
+a:hover {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.border {
+  border: 2px solid red;
+}
+
+button {
+  all: unset;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  scale: 0.9;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    --container-padding: 1.7rem;
+    width: 90%;
+    padding: 0 var(--container-padding);
+  }
+
+  .devider {
+    width: calc(100% + var(--container-padding) + var(--container-padding));
+    margin-left: calc(var(--container-padding) * -1);
+  }
+}
+@media (max-width: 600px) {
+  .icon-circle-up {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+  }
+
+}
+
+/* ========================
+. scrollbar style
+===========================*/
+::-webkit-scrollbar {
+  width: .9rem;
+}
+
+::-webkit-scrollbar-track {
+  border: 4px solid #232943;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--main), #3d4a59);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient( var(--main), rgb(116, 27, 179));
+}
+
+/* for Firefox */
+html {scrollbar-color: var(--main) #3d4a59;} 
+

@@ -1,0 +1,204 @@
+/* ========================
+table of contents
+===========================
+1. Left Section ==> Buttons
+2. Right Section ==> Card
+3- Responsive Design (media query)*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+/* ===============================
+    1. Left Section ==> Buttons
+================================== */
+main section.left-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main section.left-section button {
+    background-color: rgba(36, 37, 46, 1);
+    width: 11rem;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+    opacity: 0.5;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+main section.left-section button:hover {
+    opacity: 1;
+    border: 1px solid var(--main);
+}
+
+main .left-section button.active {
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--main);
+}
+
+/* ===============================
+    2. Right Section ==> Card
+================================== */
+
+.right-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .8rem;
+
+}
+main section.right-section {
+    margin-right: auto;
+    margin-left: auto;        
+}
+
+.card {
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-bottom: .5rem;
+    background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+    );
+    width: 225px;
+
+}
+
+.card:hover {
+    border: 1px solid var(--main);
+    rotate: 1deg;
+    scale: 1.01;
+    box-shadow: 1px 1px 15px var(--main);
+    cursor: pointer;
+}
+
+.card img {
+    border: none;
+    border-radius: 5px;
+    width: 224px;
+    height: 150px;
+    box-shadow: none;
+}
+
+.card .box {
+    padding: .5rem 0.8rem;
+    width: 225px;
+}
+
+.card .box .title {
+    color: var(--title);
+    text-transform: capitalize;
+}
+
+.card .box .sub-title {
+    color: var(--subtitle);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: .8rem;
+}
+
+.card .box .icons {
+    justify-content: space-between;
+}
+
+.card .icon-github,
+.card .icon-link {
+    font-size: 1.2rem;
+    color: var(--subtitle);
+}
+
+.card .icon-github:hover,
+.card .icon-link:hover {
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+
+.card a.link {
+    font-size: 0.9rem;
+    color: var(--main);
+}
+.card a.link:hover {
+color: rgb(164, 68, 255);
+}
+.card a span {
+    margin-left: 5px;
+}
+.styl{
+    display: none;
+}
+/* =====================================
+    3- Responsive Design (media query)
+======================================== */
+@media (max-width: 1250px) {
+
+    .right-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 800px) {
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.styl {
+    display: block;
+}
+    .right-section {
+        grid-template-columns: 1fr;
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+}
+@media (max-width: 600px) {
+    main {
+    grid-template-columns: 1fr;
+    
+    }
+    main section.right-section {
+        grid-template-columns: 1fr;
+    }
+    main section.right-section .card{
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .styl{
+        display: none;
+    }
+
+
+    main section.left-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+        width: 100%;
+    }
+
+    
+    main section.left-section button{
+        width: 7rem;
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        justify-self: center;
+    }
+    .left-section button:last-child {
+        justify-self: center;
+    }
+    main .left-section button.active {
+        padding: 0.9rem 1rem;
+        
+    }
+}
+
+

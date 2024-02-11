@@ -1,0 +1,150 @@
+/* ========================
+table of contents
+===========================
+1. top Section 
+2. bottom Section 
+2.1 left bottom-section
+2.2 right bottom-section
+3- Responsive Design (media query)*/
+
+/* ========================
+1. top Section
+===========================*/
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.top-section h1{
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3.3rem;
+    color: var(--title);
+}
+.top-section i {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--subtitle);
+    margin-right: 1.3rem;
+}
+.top-section div.sub-title P{
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    color: var(--subtitle);
+    margin-bottom: 32px;
+    margin-top: 1.5rem;
+}
+/* ========================
+2. button Section
+===========================*/
+.bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ========================
+2. left bottom-section
+===========================*/
+.bottom-section div {
+    margin-bottom: 1rem;
+}
+.bottom-section div label{
+    color: var(--subtitle);
+    font-size: 1.1rem;
+}
+.bottom-section div input,
+.bottom-section div textarea{
+    all:unset;
+    width: 15rem;
+    height: 1.6rem;
+    background-color: var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.169);
+    margin-left: 5px;
+}
+.light .bottom-section div textarea, .light .bottom-section div input{
+    background-color: rgba(63, 63, 70, 0.4);
+}
+.bottom-section div textarea.message{
+    min-height: 9rem;
+    resize: vertical;
+    margin-left: 10px;
+}
+.bottom-section div input:hover,
+.bottom-section div textarea.message:hover{
+    border: 1px solid var(--main);
+}
+.bottom-section div input:focus, 
+.bottom-section div textarea.message:focus{
+    border: 1px solid var(--main);
+}
+
+.bottom-section div:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+.bottom-section button {
+    padding: .5rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.169);
+    border-radius: 5px;
+    color: var(--subtitle);
+    background-color: var(--border);
+    transition: .2s;
+    font-size: 1.1rem;
+}
+.bottom-section button:hover {
+    color: var(--title);
+    border: 1px solid var(--main);
+}
+
+/* ========================
+2. right bottom-section
+===========================*/
+@media(max-width: 1200px) {
+    .bottom-section div.animation{
+        display: none;
+    }
+}
+/* =====================================
+    3- Responsive Design (media query)
+======================================== */
+@media(max-width: 550px){
+    .top-section h1{
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+    .top-section i {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    .bottom-section form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .bottom-section div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .bottom-section div input,
+    .bottom-section div textarea{
+        margin-left: 0px;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .bottom-section div textarea.message {
+        margin-left: 0;
+    }
+
+    .bottom-section  div.animation {
+        display: none;
+    }
+    .bottom-section button {
+        width: 8rem;
+        font-size: 1.1rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

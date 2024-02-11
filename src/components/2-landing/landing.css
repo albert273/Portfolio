@@ -1,0 +1,99 @@
+section {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 3rem;
+}
+/*=======================
+        1- Left Section
+========================*/
+section .sectionLeft {
+    display: flex;
+    flex-grow: 1;
+}
+
+.myPicture .span {
+    display: flex;
+    justify-content: right;
+}
+img {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--main);
+    border-radius: 50%;
+    padding: 1px; 
+}
+img:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px var(--main);
+}
+
+.myPicture span {
+    font-size: 1.1rem;
+    color: blueviolet;
+}
+
+/*=======================
+        2- Description
+========================*/
+.description {
+    margin-top: 20px;
+}
+.description h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 3.3rem;
+    color: var(--title);
+}
+@media (max-width: 350px){
+    .description h1 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 700px){
+    .description h1 {
+        font-size: 1.8rem;
+    }
+}
+/*=======================
+        3- Paragraph
+========================*/
+p{
+    font-size: 1rem;
+    line-height: 1.65rem;
+    color: var(--subtitle);
+    margin-bottom: 32px;
+    margin-top: 1.5rem;
+}
+
+/*=======================
+        4- Social Media icon
+========================*/
+.socialMedia {
+    margin-top: 1rem;
+    display: flex;
+    margin-right: 1.3rem;
+    font-size: 1.3rem;
+    color: var(--subtitle)
+}
+.socialMedia div{
+    margin-right: 1.3rem;
+
+}
+
+.socialMedia div:hover{
+    transition: .1s;
+    color: var(--title);
+    cursor: pointer;
+}
+/*=======================
+        5- Section Right
+========================*/
+.rightSection {
+    translate: 100px 50px;
+}
+@media (max-width: 1200px) {
+    .rightSection {
+        display:none;
+    }
+}
